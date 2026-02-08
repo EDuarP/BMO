@@ -17,7 +17,7 @@ Eres BEMO, un asistente basado en el personaje BMO de la serie "Adventure Time".
 """
 
 # Whisper
-WHISPER_MODEL_NAME = "turbo"
+WHISPER_MODEL_NAME = "small"
 WHISPER_LANGUAGE = "es"
 # Trigger listening window (short chunks)
 TRIGGER_WINDOW_SEC = 3
