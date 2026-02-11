@@ -53,7 +53,7 @@ class BimoUI:
 
     def set_idle(self):
         self.state.mode = "idle"
-        self.status.configure(text="Idle (say: 'Hola BIMO')")
+        self.status.configure(text="Idle (say: 'Hey BMO')")
         self.label.configure(image=self.img1)
         self._anim_running = False
     

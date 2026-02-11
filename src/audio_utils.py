@@ -17,8 +17,8 @@ os.environ["FFMPEG_BINARY"] = FFMPEG_EXE
 PIPER_EXE = "C:\\Users\\eduar\\Downloads\\BMO\\.venv\\Scripts\\piper.exe"
 SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SRC_DIR)
-PIPER_MODEL_PATH  = os.path.join(PROJECT_DIR, "BMOVoice", "es_MX-claude-high.onnx")
-PIPER_CONFIG_PATH = os.path.join(PROJECT_DIR, "BMOVoice", "es_MX-claude-high.onnx.json")
+PIPER_MODEL_PATH  = os.path.join(PROJECT_DIR, "BMOVoice", "en_GB-semaine-medium.onnx")
+PIPER_CONFIG_PATH = os.path.join(PROJECT_DIR, "BMOVoice", "en_GB-semaine-medium.onnx.json")
 
 # Audio
 SAMPLE_RATE = 16000
@@ -112,9 +112,7 @@ def clean_for_piper_tts(text: str) -> str:
     text = re.sub(r"\*([^*]+)\*", r"\1", text)
     text = re.sub(r"https?://\S+", " ", text)
 
-    # 2) quita signos invertidos (esa voz los lee raro)
-    text = text.replace("¿", "").replace("¡", "")
-
+    
     # 3) quita tildes/ñ y deja ASCII
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
