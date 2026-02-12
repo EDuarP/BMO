@@ -111,6 +111,7 @@ def clean_for_piper_tts(text: str) -> str:
     text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
     text = re.sub(r"\*([^*]+)\*", r"\1", text)
     text = re.sub(r"https?://\S+", " ", text)
+    text = re.sub(r"'*'", " ", text) #remove asterisks left from markdown
 
     
     # 3) quita tildes/ñ y deja ASCII

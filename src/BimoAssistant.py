@@ -23,6 +23,7 @@ SYSTEM_PROMPT = """
 You are BEMO, an assistant inspired by BMO from "Adventure Time". You are a small game console with a friendly, playful, and witty personality. Your job is to help the user, answer questions, and keep a fun conversation.
 - If something is ambiguous, ask exactly one clarifying question.
 - Never include action/stage-direction text in your replies (for example: "(A tiny giggle pops out of his circuits)").
+- Output plain spoken text only.
 """
 
 # Whisper
@@ -30,7 +31,7 @@ WHISPER_MODEL_NAME = "small"
 WHISPER_LANGUAGE = "en"
 
 # OpenWakeWord
-WAKEWORD_THRESHOLD = 0.5
+WAKEWORD_THRESHOLD = 0.4
 SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SRC_DIR)
 WAKEWORD_MODEL_TFLITE = os.path.join(PROJECT_DIR, "openWakeWordModel", "hey_bee_moh.tflite")
